@@ -1,0 +1,2 @@
+# Once every hour at minute 39
+39 * * * * /backup.sh
