@@ -1,3 +1,5 @@
+mkdir -p /backup
+
 UNIQUE_NAME=$(date +%Y%m%d%H%M%S)
 BACKUP_PATH="/backup/backup_$UNIQUE_NAME.sqlite3"
 
