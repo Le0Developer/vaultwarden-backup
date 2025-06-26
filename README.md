@@ -11,7 +11,7 @@ For example using Docker Compose:
 ```yaml
 services:
   vaultwarden:
-    image: vaultwarden/server:latest
+    image: vaultwarden/server:master
     volumes:
       - ./data:/data
   vaultwarden-backup:
