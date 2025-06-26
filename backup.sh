@@ -13,7 +13,7 @@ if [ $? -eq 0 ]; then
 
   # If rclone is setup, sync the backup
   if [ -n "$RCLONE_REMOTE" ]; then
-    rclone copy "$BACKUP_PATH" "$RCLONE_REMOTE" --quiet --transfers=1 --checkers=1
+    rclone copy "$BACKUP_PATH" "$RCLONE_REMOTE" -vP --s3-no-check-bucket
   fi
 
   # If clean is set, remove older backups
