@@ -8,7 +8,7 @@ sqlite3 /data/db.sqlite3 ".backup '$BACKUP_PATH'"
 if [ $? -eq 0 ]; then
   # If the HEALTHCHECK_URL is set, send a request to it
   if [ -n "$HEALTHCHECK_URL" ]; then
-    wget --quiet --tries=1 --timeout=5 "$HEALTHCHECK_URL"
+    wget --quiet --tries=1 --timeout=5 --spider "$HEALTHCHECK_URL"
   fi
 
   # If rclone is setup, sync the backup
