@@ -11,11 +11,11 @@ For example using Docker Compose:
 ```yaml
 services:
   vaultwarden:
-    image: vaultwarden/server:master
+    image: vaultwarden/server:latest
     volumes:
       - ./data:/data
   vaultwarden-backup:
-    image: ghcr.io/le0developer/vaultwarden-backup:latest
+    image: ghcr.io/le0developer/vaultwarden-backup:master
     volumes:
       - ./data:/data
 ```
